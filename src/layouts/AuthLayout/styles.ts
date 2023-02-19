@@ -14,5 +14,4 @@ const appearFromLeft = keyframes`
 
 export const LayoutContainer = styled.div`
   animation: ${appearFromLeft} 1s;
-  height: calc(100vh - 10rem);
 `;

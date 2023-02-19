@@ -4,20 +4,20 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-interface INavButtonProps extends PropsWithChildren {
+interface MenuItemsProp extends PropsWithChildren {
   itemText: string;
   routePath: string;
 }
 
-const NavPathButton: FC<INavButtonProps> = ({ children, itemText, routePath }) => {
+const MenuItem: FC<MenuItemsProp> = ({ children, itemText, routePath }) => {
   return (
-    <Link to={routePath}>
-      <ListItemButton>
+    <>
+      <ListItemButton component={Link} to={routePath}>
         <ListItemIcon>{children}</ListItemIcon>
         <ListItemText primary={itemText} />
       </ListItemButton>
-    </Link>
+    </>
   );
 };
 
-export default NavPathButton;
+export default MenuItem;

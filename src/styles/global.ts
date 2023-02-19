@@ -48,11 +48,6 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
-    a {
-        text-decoration: none;
-        color: #363f5f;
-    }
-
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
